@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.accordion {
+  margin: 0 auto;
+  height: 100vh;
+  width: 60%;
+  padding: 40px 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.accordion-left {
+  width: 40%;
+}
+.accordion-left p {
+  font-size: 25px;
+  font-weight: 400;
+}
+.accordion-left span {
+  font-size: 32px;
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.accordion-right {
+  width: 60%;
+}
+
+.question-card {
+  padding: 0 20px;
+  box-shadow: 1px 1px 3px #5a5a5a;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.question button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.question p {
+  font-weight: 600;
+  font-size: 20px;
+}
+.question .fas {
+  font-size: 20px;
+}
+.ans {
+  padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .accordion {
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+  .accordion-left {
+    width: 100%;
+  }
+  .accordion-right {
+    margin-top: 30px;
+    width: 100%;
   }
 }
